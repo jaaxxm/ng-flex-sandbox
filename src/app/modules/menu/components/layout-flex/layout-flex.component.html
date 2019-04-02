@@ -1,0 +1,39 @@
+<div class="panels-container">
+    <div class="flex-wrapper"
+        fxLayout="column">
+        <div class="panel-header"
+            fxFlex="1 0 15vh">
+            <h2>Flexed container</h2>
+        </div>
+        <div class="panel-content"
+            fxFlex="1 0 65vh">
+            <pre>
+                .flex-wrapper
+                    direction: column;
+            </pre><br>
+            <pre>
+                    .panel-composer
+                        position: static;
+            </pre>
+
+            <button (click)=toggleShifting()>
+                <span *ngIf="shiftEnabled">Disable</span>
+                <span *ngIf="!shiftEnabled">Enable</span>
+                Shifting
+            </button>
+        </div>
+        <div class="panel-composer"
+            fxFlex="1 0 25vh">
+            <textarea id="composer-input"
+                (focus)="focusFunction($event.target)"
+                (focusout)="focusOutFunction($event.target)"
+                rows="2"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="Glitch is here">
+                </textarea>
+        </div>
+    </div>
+</div>
