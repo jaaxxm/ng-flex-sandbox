@@ -23,8 +23,7 @@
         </div>
         <div class="panel-composer">
             <textarea id="composer-input"
-                (focus)="focusFunction($event.target)"
-                (focusout)="focusOutFunction($event.target)"
+                #composerTextarea
                 rows="2"
                 autocomplete="off"
                 autocorrect="off"
